@@ -5,7 +5,7 @@ The Gloomy theme is a custom theme for SDDM (Simple Desktop Display Manager) des
 ## Installation
 
 ### Automated Installation (Recommended)
-1. Download and place the theme folder (`gloomy`) in your desired location.
+1. Download and open the folder in terminal.
 2. Use the provided installation script to install the theme:
    ```bash
    ./install.sh

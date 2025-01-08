@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Gloomy SDDM Installer made by Gabbar-v7
+# Visit https://GitHub.com/Gabbar-v7
+
+# Cool designed header
+echo "#####################################################"
+echo "#                                                   #"
+echo "#         GLOOMY-SDDM Theme Installer               #"
+echo "#              Made by Gabbar-v7                    #"
+echo "#                   Visit                           #"
+echo "#     https://github.com/Gabbar-v7/Gloomy-SDDM      #"
+echo "#                                                   #"
+echo "#####################################################"
+echo ""
+
 # Variables
 THEME_NAME="gloomy"
 SOURCE_DIR="$(pwd)/$THEME_NAME"
