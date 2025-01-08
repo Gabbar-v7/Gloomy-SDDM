@@ -1,5 +1,9 @@
 # Gloomy SDDM Theme
 
+<div align="center">
+<img src="assets/preview.jpg" alt="Kawaii GRUB Theme">
+</div>
+
 The Gloomy theme is a custom theme for SDDM (Simple Desktop Display Manager) designed to provide a sleek, dark, and modern login screen for your system. This theme enhances the login experience with its minimalist design and visually appealing aesthetics.
 
 ## Installation
