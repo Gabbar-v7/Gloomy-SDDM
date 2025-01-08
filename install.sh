@@ -4,6 +4,7 @@
 # Visit https://GitHub.com/Gabbar-v7
 
 # Cool designed header
+echo ""
 echo "#####################################################"
 echo "#                                                   #"
 echo "#         GLOOMY-SDDM Theme Installer               #"
