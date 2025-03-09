@@ -23,8 +23,8 @@ SDDM_CONF="/etc/sddm.conf"
 
 # Check if the theme folder exists
 if [ ! -d "$SOURCE_DIR" ]; then
-    echo "Error: Theme folder '$THEME_NAME' does not exist in the current directory."
-    exit 1
+	echo "Error: Theme folder '$THEME_NAME' does not exist in the current directory."
+	exit 1
 fi
 
 # Move the theme to the SDDM themes directory
@@ -35,10 +35,23 @@ sudo cp -r "$SOURCE_DIR" "$TARGET_DIR"
 # Edit or create the SDDM configuration file
 echo "Updating SDDM configuration..."
 if [ -f "$SDDM_CONF" ]; then
-    sudo sed -i '/^\[Theme\]/{N;s/^\[Theme\]\nCurrent=.*/[Theme]\nCurrent='$THEME_NAME'/}' "$SDDM_CONF" || \
-    echo -e "\n[Theme]\nCurrent=$THEME_NAME" | sudo tee -a "$SDDM_CONF" > /dev/null
+	sudo sed -i '/^\[Theme\]/{N;s/^\[Theme\]\nCurrent=.*/[Theme]\nCurrent='$THEME_NAME'/}' "$SDDM_CONF" ||
+		echo -e "\n[Theme]\nCurrent=$THEME_NAME" | sudo tee -a "$SDDM_CONF" >/dev/null
 else
-    echo -e "[Theme]\nCurrent=$THEME_NAME" | sudo tee "$SDDM_CONF" > /dev/null
+	echo -e "[Theme]\nCurrent=$THEME_NAME" | sudo tee "$SDDM_CONF" >/dev/null
+fi
+
+# Prompt user to enable NumLock
+read -p "Do you want to enable NumLock on SDDM? (y/n): " enable_numlock
+if [[ $enable_numlock == "y" || $enable_numlock == "Y" ]]; then
+	echo "Enabling NumLock..."
+	if grep -q "Numlock=" "$SDDM_CONF"; then
+		sudo sed -i 's/^Numlock=.*/Numlock=on/' "$SDDM_CONF"
+	else
+		echo -e "\n[General]\nNumlock=on" | sudo tee -a "$SDDM_CONF" >/dev/null
+	fi
+else
+	echo "NumLock will not be enabled."
 fi
 
 # Wait for user confirmation before restarting SDDM
