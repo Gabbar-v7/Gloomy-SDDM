@@ -9,12 +9,16 @@ The Gloomy theme is a custom theme for SDDM (Simple Desktop Display Manager) des
 ## Installation
 
 ### Automated Installation (Recommended)
+
 1. Download and open the folder in terminal.
 2. Use the provided installation script to install the theme:
+
    ```bash
    ./install.sh
    ```
+
    The script will:
+
    - Move the `gloomy` theme folder to `/usr/share/sddm/themes/`.
    - Update or create the SDDM configuration file (`/etc/sddm.conf`) to set `Current=gloomy`.
    - Restart the SDDM service to apply the changes.
@@ -22,12 +26,15 @@ The Gloomy theme is a custom theme for SDDM (Simple Desktop Display Manager) des
 3. Follow the prompts in the script to complete the installation.
 
 ### Manual Installation
+
 1. Copy the `gloomy` theme folder to `/usr/share/sddm/themes/`:
+
    ```bash
    sudo cp -r gloomy /usr/share/sddm/themes/
    ```
 
 2. Edit the SDDM configuration file (`/etc/sddm.conf`) to set the current theme:
+
    - Open the file in a text editor:
      ```bash
      sudo nano /etc/sddm.conf
@@ -44,8 +51,11 @@ The Gloomy theme is a custom theme for SDDM (Simple Desktop Display Manager) des
    ```
 
 ## Uninstallation
+
 To remove the Gloomy theme:
+
 1. Delete the theme folder:
+
    ```bash
    sudo rm -r /usr/share/sddm/themes/gloomy
    ```
@@ -58,7 +68,9 @@ To remove the Gloomy theme:
    ```
 
 ## Troubleshooting
+
 - If the login screen does not display correctly after installation, ensure that:
+
   - The `gloomy` folder is correctly placed in `/usr/share/sddm/themes/`.
   - The `/etc/sddm.conf` file is properly configured with `[Theme] Current=gloomy`.
 
@@ -68,8 +80,15 @@ To remove the Gloomy theme:
   ```
 
 ## License
+
 This project is licensed under the [MIT License](LICENSE).
 
---- 
+---
 
-Enjoy your sleek and modern SDDM theme!
+Enjoy your sleek and modern **Gloomy-SDDM** theme!
+
+<div align="center">
+    <a href="https://github.com/sponsors/Gabbar-v7"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="GitHub Sponsors" height=30></a>&nbsp;
+    <a href="https://buymeacoffee.com/gabbar_v7"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" height=30></a>&nbsp;
+    <a href="https://www.paypal.me/GabbarShall"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal" height=30></a>
+</div>
